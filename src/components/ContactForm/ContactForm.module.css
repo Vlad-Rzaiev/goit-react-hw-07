@@ -1,76 +1,55 @@
 .form {
-  width: 100%;
-  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   padding: 20px;
-  background-color: #e0e0e0;
-  border-radius: 12px;
-  box-shadow: 6px 6px 12px #b8b8b8, -6px -6px 12px #ffffff;
-  margin: 0 auto 36px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto 20px;
 }
 
 .inputContainer {
   display: flex;
   flex-direction: column;
-  margin-bottom: 16px;
+  gap: 6px;
 }
 
 .label {
-  font-size: 14px;
   font-weight: 600;
-  margin-bottom: 6px;
   color: #333;
 }
 
 .input {
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  background-color: #e0e0e0;
-  box-shadow: inset 6px 6px 12px #b8b8b8, inset -6px -6px 12px #ffffff;
-  font-size: 16px;
-  outline: none;
-  transition: box-shadow 250ms linear;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 250ms linear;
 }
 
 .input:focus {
-  box-shadow: inset 3px 3px 6px #b8b8b8, inset -3px -3px 6px #ffffff;
+  border-color: #ff6b6b;
+  outline: none;
 }
 
 .error {
-  display: block;
-  min-height: 20px;
-  font-size: 12px;
-  color: #d32f2f;
-  text-align: left;
-  margin-top: 4px;
-  opacity: 0;
-  transition: opacity 250ms linear;
-}
-
-.error:not(:empty) {
-  opacity: 1;
+  color: #e63946;
+  font-size: 14px;
 }
 
 .button {
-  width: 100%;
-  padding: 12px;
+  background-color: #ff6b6b;
+  color: #fff;
   border: none;
-  border-radius: 8px;
-  background-color: #e0e0e0;
-  box-shadow: 6px 6px 12px #b8b8b8, -6px -6px 12px #ffffff;
-  font-size: 16px;
+  padding: 10px;
   font-weight: 600;
-  cursor: pointer;
-  transition: box-shadow 250ms linear, transform 250ms linear;
+  border-radius: 6px;
+  transition: background-color 250ms linear, transform 250ms linear;
 }
 
-.button:hover,
-.button:focus {
-  box-shadow: 3px 3px 6px #b8b8b8, -3px -3px 6px #ffffff;
-  transform: translateY(-2px);
-}
-
-.button:active {
-  box-shadow: inset 3px 3px 6px #b8b8b8, inset -3px -3px 6px #ffffff;
-  transform: translateY(1px);
+.button:hover {
+  background-color: #e63946;
+  transform: scale(1.05);
 }

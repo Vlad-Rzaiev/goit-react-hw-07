@@ -1,26 +1,16 @@
 .title {
-  font-size: 2rem;
+  font-size: 36px;
+  font-weight: 700;
   text-align: center;
-  color: #333;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  margin-bottom: 36px;
+  color: #222;
+  background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  transition: opacity 250ms linear;
 }
 
-.noContacts {
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-align: center;
-  color: #999;
-  padding: 20px;
-  background-color: #f0f0f3;
-  border-radius: 12px;
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1),
-    -10px -10px 15px rgba(255, 255, 255, 0.3);
-  transition: background-color 250ms linear, box-shadow 250ms linear;
-}
-
-.noContacts:hover {
-  background-color: #e5e5e9;
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2),
-    -10px -10px 15px rgba(255, 255, 255, 0.2);
+.title:hover {
+  opacity: 0.8;
 }
