@@ -16,7 +16,7 @@ const contactSchema = Yup.object().shape({
     .required('Required field!'),
 });
 
-export default function ContactForm() {
+export default function ContactForm({ inputNameRef }) {
   const dispatch = useDispatch();
   const fieldId = useId();
 
@@ -68,6 +68,7 @@ export default function ContactForm() {
             name="name"
             id={fieldId + 'name'}
             autoComplete="name"
+            ref={inputNameRef}
           />
           <ErrorMessage className={styles.error} name="name" component="span" />
         </div>
