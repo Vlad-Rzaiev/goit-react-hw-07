@@ -40,7 +40,9 @@ function App() {
         {loading && !error && <Loader />}
         {error && <ErrorMessage message={error} />}
         {contacts.length > 0 && <ContactList />}
-        {contacts.length === 0 && <NoContacts inputNameRef={inputNameRef} />}
+        {contacts.length === 0 && !loading && (
+          <NoContacts inputNameRef={inputNameRef} />
+        )}
       </Container>
     </Section>
   );
